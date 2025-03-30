@@ -1,0 +1,430 @@
+/* index.css */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4 { 
+    font-family: 'Playfair Display', serif;
+    color: #222; 
+    font-weight: 600 ;
+    letter-spacing: 0.5px;
+    
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+   
+    
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    height: 10;
+    margin-top: 50px;
+    margin-bottom: 30 px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.05rem;
+    
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #222;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #444;
+    transform: translateY(-3px);
+}
+
+/* Header and Navigation */
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li { margin-left: 30px; }
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover { color: #ccc; }
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background-color: #222;
+    color: white;
+    z-index: 200;
+    transition: left 0.3s;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+}
+
+.sidebar.active { left: 0; }
+
+.sidebar-header {
+    padding: 20px;
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.sidebar-content { padding: 20px; }
+
+.sidebar-nav {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.sidebar-nav li { margin-bottom: 10px; }
+
+.sidebar-nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
+.sidebar-nav a:hover {
+    background-color: #444;
+    transform: translateX(5px);
+}
+
+.sidebar-category {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #999;
+    letter-spacing: 1px;
+}
+
+/* Sections */
+section { padding: 80px 0; }
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+}
+
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #444;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Home Section */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: white;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #ccc;
+    font-weight: 300;
+}
+
+/* Project Cards */
+.project-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    ;
+
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 40px;
+
+}
+
+/* Contact Section */
+.contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    
+
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .section-title { font-size: 2rem; }
+}
+
+/* project.html styling */
+.projects-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    width: 30%;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-tags {
+    margin-top: 10px;
+}
+
+.project-tags span {
+    background-color: #eee;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+/* contact.html styling */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info {
+    width: 45%;
+}
+
+.contact-form {
+    width: 45%;
+}
+
+/* about.html styling */
+.about-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-img {
+    width: 30%;
+    margin-right: 20px;
+}
+
+.about-text {
+    width: 70%;
+}
+
+.skill-item {
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-bar {
+    background-color: #eee;
+    height: 10px;
+    width: 100%;
+}
+
+.skill-progress {
+    background-color: #444;
+    height: 10px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info {
+    width: 45%;
+}
+
+.contact-form {
+    width: 45%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.sidebar-header h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.about-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-img {
+    width: 30%;
+    margin-right: 20px;
+}
+
+.about-text {
+    width: 70%;
+}
+
+.skill-item {
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-bar {
+    background-color: #eee;
+    height: 10px;
+    width: 100%;
+}
+
+.skill-progress {
+    background-color: #444;
+    height: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #323333;
+    color: #f7f2f2;
+    margin-top: 100px;
+    margin-bottom: 10px;
+  }
